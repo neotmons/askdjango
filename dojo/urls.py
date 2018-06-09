@@ -1,6 +1,8 @@
-from django.conf.urls import urls
-from django.contrib import admin
+# blog/urls.py
 
-urlpatters = [
+from django.conf.urls import url
+from dojo import views
+
+urlpatterns = [
 
 ]
