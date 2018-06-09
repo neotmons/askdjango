@@ -92,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/dojo/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <caret line="7" column="54" lean-forward="false" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
               <folding>
                 <element signature="e#16#48#0" expanded="true" />
               </folding>
@@ -103,8 +103,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dojo/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="230">
+              <caret line="10" column="61" lean-forward="false" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
               <folding>
                 <element signature="e#17#53#0" expanded="true" />
               </folding>
@@ -309,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528558578338</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="dojo.views.mysum에서 다수 숫자를 받도록 개선">
+      <created>1528559146597</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1528559146597</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -358,7 +365,8 @@
     <MESSAGE value="조금 업데이트" />
     <MESSAGE value="새로운 dojo 앱을 생성하고 등록" />
     <MESSAGE value="정규표현식에 대한 실습예제 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="정규표현식에 대한 실습예제 추가" />
+    <MESSAGE value="dojo.views.mysum에서 다수 숫자를 받도록 개선" />
+    <option name="LAST_COMMIT_MESSAGE" value="dojo.views.mysum에서 다수 숫자를 받도록 개선" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -446,7 +454,7 @@
     <entry file="file://$PROJECT_DIR$/dojo/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <caret line="7" column="54" lean-forward="false" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
           <folding>
             <element signature="e#16#48#0" expanded="true" />
           </folding>
@@ -455,8 +463,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dojo/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="230">
+          <caret line="10" column="61" lean-forward="false" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
           <folding>
             <element signature="e#17#53#0" expanded="true" />
           </folding>
