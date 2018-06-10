@@ -32,3 +32,6 @@ class Post(models.Model):
     status = models.CharField(max_length=1, choices=STATUS_CHOICES)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:     # 기본 정렬을 id 역순으로 정렬
+        ordering = ['-id']
