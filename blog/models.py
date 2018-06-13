@@ -2,9 +2,11 @@
 
 import re
 from django.conf import settings
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.forms import ValidationError
 from django.contrib.auth.models import User
+
 
 
 def lnglat_validator(value):
@@ -41,6 +43,11 @@ class Post(models.Model):
     class Meta:     # 기본 정렬을 id 역순으로 정렬
         ordering = ['-id']
 
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('blog:post_detail', args=[self.id])
 
 class Comment(models.Model):
     post = models.ForeignKey(Post)
@@ -49,5 +56,11 @@ class Comment(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.message
+
 class Tag(models.Model):
     name = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.name
