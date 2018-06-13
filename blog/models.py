@@ -29,6 +29,7 @@ class Post(models.Model):
                                help_text='위도/경도 포맷으로 입력'
                                )
 
+    tag_set = models.ManyToManyField('Tag')     # Model Class를 문자열로도 지정 가능함. '' 같은 앱에 있는 Class와 Relation을 맺는다는 의미.
     status = models.CharField(max_length=1, choices=STATUS_CHOICES)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -43,3 +44,6 @@ class Comment(models.Model):
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+class Tag(models.Model):
+    name = models.CharField(max_length=50, unique=True)
