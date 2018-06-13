@@ -7,6 +7,16 @@
         <h1>{{ post.title }}</h1>
 
             {{ post.content|linebreaks }}       # linebreakers를 통해 개행 처리
+
+        <hr/>
+
+        <ul>
+            <h3>Commnet</h3>
+            {% for comment in post.comment_set.all %}
+                <li><small>by {{ comment.message }}</small>
+                <small>at {{ comment.updated_at }}</small></li>
+            {% endfor %}
+        </ul>
     <body>
 
     </body>

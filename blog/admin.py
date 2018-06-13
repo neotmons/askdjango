@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
-from .models import Post
+from .models import Post, Comment
 
 # Register your models here.
 
@@ -33,5 +33,8 @@ class PostAdmin(admin.ModelAdmin):
 
     make_withdraw.short_description = '지정 포스팅을 Withdraw로 변경합니다.'
 
-#admin.site.register(Post, PostAdmin)
+@admin.register(Comment)
+class CommnetAdmin(admin.ModelAdmin):
+    list_display = ['id', 'post_id', 'message', 'created_at', 'updated_at']
+    pass
 
