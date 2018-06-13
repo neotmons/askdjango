@@ -1,6 +1,7 @@
 # blog/models.py
 
 import re
+from django.conf import settings
 from django.db import models
 from django.forms import ValidationError
 from django.contrib.auth.models import User
@@ -18,6 +19,8 @@ class Post(models.Model):
         ('p', 'published'),
         ('w', 'withdraw')
     )
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
 
     author = models.CharField(max_length=20, verbose_name='작성자')
     title = models.CharField(max_length=100, verbose_name='제목',
