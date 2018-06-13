@@ -5,21 +5,61 @@
 {% endblock %}
 
 {% block content %}
-    <form action="" method="get">
-        <input type="text" name="q" value="{{ q }}" />
-        <input type="submit" value="검색" />
-    </form>
-    <ul>
-    {% for post in post_list %}
-        <li>
-            {{  post.id }}
-
-            <a href="{{ post.get_absolute_url }}">
-                {{ post.title }}
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Django Template <sup>by AskDjango</sup></h1>
+            <p>여러분의 파이썬/장고 페이스메이커가 되겠습니다.</p>
+            <p>
+            <a class="btn btn-lg btn-primary" href="http://facebook.com/groups/askdjango">
+            AskDjango 페이스북 그룹 &raquo;
             </a>
-            <small>by {{  post.author }} </small>
-            <small>at {{  post.updated_at }} </small>
-        </li>
-    {% endfor %}
-    </ul>
+            </p>
+        </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="alert alert-info">
+                <p>
+                    <ul>
+                        <li>http://localhost:800/blog/ 주소로 접속해보세요.</li>
+                        <li>템플릿 경로를 blog/templates/post_list.html 경로가 아닌
+                        blog/templates/blog/post_list.html 경로를 쓰는 지에 대한 이유는,
+                        후에 Template loader에서 설명합니다. </li>
+
+                    </ul>
+                </p>
+            </div>
+
+            <form action="" method="get">
+                    <p>
+                    <input type="text" name="q" value="{{ q }}" />
+                    <input type="submit" value="검색" class="btn btn-primary"/>
+                    </p>
+            </form>
+
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <th>id</th>
+                    <td>title</td>
+                    <td>author</td>
+                    <td>updated at</td>
+                </thead>
+                <tbody>
+                    {% for post in post_list %}
+                        <tr>
+                            <td>{{  post.id }}</td>
+                            <td><a href="{{ post.get_absolute_url }}"> {{ post.title }} </a></td>
+                            <td> {{  post.author }} </td>
+                            <td> {{  post.updated_at }} </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    </div>
+
+
 {%  endblock %}
