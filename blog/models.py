@@ -3,6 +3,7 @@
 import re
 from django.db import models
 from django.forms import ValidationError
+from django.contrib.auth.models import User
 
 
 def lnglat_validator(value):
@@ -47,3 +48,9 @@ class Comment(models.Model):
 
 class Tag(models.Model):
     name = models.CharField(max_length=50, unique=True)
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User)
+    phone = models.CharField(max_length=20)
+    address = models.CharField(max_length=100)
