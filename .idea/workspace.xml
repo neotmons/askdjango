@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="23bc0a73-ed46-4edf-ab58-f77dfd552c95" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/models.py" afterPath="$PROJECT_DIR$/blog/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" afterPath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -75,6 +75,18 @@
             <state relative-caret-position="342">
               <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post_detail.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blog/templates/blog/post_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+              <folding>
+                <element signature="e#325#349#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,16 +109,6 @@
               <folding>
                 <element signature="e#16#47#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog/templates/blog/post_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -176,7 +178,6 @@
         <option value="$PROJECT_DIR$/dojo/urls.py" />
         <option value="$PROJECT_DIR$/dojo/views.py" />
         <option value="$PROJECT_DIR$/blog/forms.py" />
-        <option value="$PROJECT_DIR$/blog/templates/blog/post_detail.html" />
         <option value="$PROJECT_DIR$/dojo/admin.py" />
         <option value="$PROJECT_DIR$/dojo/models.py" />
         <option value="$PROJECT_DIR$/dojo/forms.py" />
@@ -191,6 +192,7 @@
         <option value="$PROJECT_DIR$/askdjango/urls.py" />
         <option value="$PROJECT_DIR$/blog/templates/blog/post_form.html" />
         <option value="$PROJECT_DIR$/blog/models.py" />
+        <option value="$PROJECT_DIR$/blog/templates/blog/post_detail.html" />
       </list>
     </option>
   </component>
@@ -705,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529243351977</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="blog.models.post의 photo 필드에 upload_to 인자 지정">
+      <created>1529243768617</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1529243768617</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView">
@@ -759,7 +768,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="profile에 대한 onetoone field 테이블 생성" />
     <MESSAGE value="OnetoOne 필드 지정 및 적용" />
     <MESSAGE value="shop 앱 생성 / 등록" />
     <MESSAGE value="related name 예시로 shop 앱 추가" />
@@ -784,7 +792,8 @@
     <MESSAGE value="MEDIA 셋팅을 하고, blog.models.post에 photo 필드 추가" />
     <MESSAGE value="media 파일 서빙 지원" />
     <MESSAGE value="blog.post_form.html에 파일업로드를 위한 enctype 지정" />
-    <option name="LAST_COMMIT_MESSAGE" value="blog.post_form.html에 파일업로드를 위한 enctype 지정" />
+    <MESSAGE value="blog.models.post의 photo 필드에 upload_to 인자 지정" />
+    <option name="LAST_COMMIT_MESSAGE" value="blog.models.post의 photo 필드에 upload_to 인자 지정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1071,14 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/templates/blog/post_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dojo/templates/dojo/post_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1186,6 +1187,16 @@
         <state relative-caret-position="323">
           <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/templates/blog/post_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="e#325#349#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
