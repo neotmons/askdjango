@@ -1,5 +1,6 @@
 # blog/views.py
 from django.http import Http404
+from django.contrib import messages
 from django.shortcuts import get_object_or_404, render, redirect
 from .models import Post
 from .forms import PostForm
@@ -37,8 +38,8 @@ def post_new(request):
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save()
-            #post.user = request.user
-            #post.save()
+            messages.success(request, '새 포스팅을 저장했습니다.')
+
             return redirect(post)  # post.get_absolute_url() --> post detail
     else:
         form = PostForm()
@@ -53,6 +54,7 @@ def post_edit(request, id):
         form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save()
+            messages.success(request, '포스팅을 수정했습니다.')
             #post.user = request.user
             #post.save()
             return redirect(post)  # post.get_absolute_url() --> post detail
