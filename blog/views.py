@@ -11,6 +11,8 @@ def post_list(request):
 
     q = request.GET.get('q','')
 
+    # messages.error(request,"에러")
+
     if q:
         qs = qs.filter(title__icontains=q)
 
