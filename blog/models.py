@@ -29,7 +29,7 @@ class Post(models.Model):
                              help_text='포스팅 제목을 입력해 주세요. 100자 내외')    # 길이 제한이 있는 문자열
     content = models.TextField(verbose_name='내용')                # 길이 제한이 없는 문자열
 
-    photo = models.ImageField(blank=True)
+    photo = models.ImageField(blank=True, upload_to='blog/post/%Y/%m/%d')
 
     tags = models.CharField(max_length=100, blank=True)
     langlat = models.CharField(max_length=50, blank=True,
