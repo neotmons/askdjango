@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'bootstrap3',
     'debug_toolbar',
     'accounts',
+    'imagekit',
     'blog',
     'dojo',
     'shop',
